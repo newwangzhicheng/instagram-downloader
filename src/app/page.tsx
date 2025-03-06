@@ -2,7 +2,7 @@ import Form from '@/app/components/Form'
 import { Github } from 'lucide-react'
 import { Toaster } from '@/components/ui/toaster'
 import { Suspense } from 'react'
-
+import TestDownload from '@/app/components/TestDownload'
 export default function Home() {
   return (
     <div>
@@ -25,6 +25,7 @@ export default function Home() {
         <Suspense>
           <Form />
         </Suspense>
+        <TestDownload />
       </main>
       <Toaster />
     </div>
