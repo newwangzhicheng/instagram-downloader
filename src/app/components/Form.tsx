@@ -6,9 +6,7 @@ import { toCorsUrl } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
-import { ToastAction } from '@/components/ui/toast'
 import { useToast } from '@/hooks/use-toast'
-
 function LongPressSave(props: { href: string }) {
   return (
     <a href={props.href} download>
@@ -16,6 +14,7 @@ function LongPressSave(props: { href: string }) {
     </a>
   )
 }
+
 
 export default function Form() {
   const [resourceInfo, setResourceInfo] = useState<ResourceInfo[]>([])
@@ -26,13 +25,13 @@ export default function Form() {
       await navigator.clipboard.writeText(location.href)
       toast({
         description: 'Download Link has been copied to clipboard',
-        action: <ToastAction altText="OK">OK</ToastAction>
+        duration: 1500
       })
     } catch {
       toast({
         title: 'Error',
         description: 'Please allow clipboard access.',
-        action: <ToastAction altText="OK">OK</ToastAction>
+        duration: 1500
       })
     }
   }

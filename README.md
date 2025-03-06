@@ -20,6 +20,7 @@ npm install && npm run dev
 - Error message
 
 ## Next Steps
+- Support PWA ✅
 - More compatible
 - Add image preview ✅
 - Add video download button ✅
